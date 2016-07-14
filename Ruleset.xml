@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<ruleset name="Mine">
+    <description>Mine Coding Standard</description>
+
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+    <!--没有使用的参数-->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+    <rule ref="Generic.Commenting.Fixme"/>
+    <rule ref="Generic.Commenting.Todo"/>
+    <!--utf8无bom-->
+    <rule ref="Generic.Files.ByteOrderMark"/>
+    <rule ref="Generic.Files.OneClassPerFile"/>
+    <rule ref="Generic.Files.OneInterfacePerFile"/>
+    <rule ref="Generic.Functions.CallTimePassByReference"/>
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <!--方法复杂度-->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+        <property name="complexity" value="15"/>
+        </properties>
+    </rule>
+    <!--嵌套等级不能过高默认3-->
+    <rule ref="Generic.Metrics.NestingLevel"/>
+    <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+
+    <!--禁止tab缩进-->
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <rule ref="Generic.PHP.Syntax"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+
+    <rule ref="Squiz.Functions.GlobalFunction"/>
+    <rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag"/>
+    <rule ref="Squiz.Operators.IncrementDecrementUsage"/>
+    <rule ref="Squiz.PHP.DiscouragedFunctions"/>
+    <rule ref="Squiz.PHP.Eval"/>
+    <rule ref="Squiz.PHP.GlobalKeyword"/>
+    <rule ref="Squiz.PHP.NonExecutableCode"/>
+    <rule ref="Squiz.Scope.MethodScope"/>
+    <rule ref="Squiz.Scope.MemberVarScope"/>
+
+    <!--圆括号顶头和末尾前不能有空格-->
+    <rule ref="Squiz.WhiteSpace.CastSpacing"/>
+
+    <!--类调用箭头不能有空格-->
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/>
+
+    <!--类的定义，一个文件只能有一个类-->
+    <rule ref="PSR1.Classes.ClassDeclaration">
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+
+    <!--分号前不能有空格-->
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+
+    <!--echo print require include ...后面要加一个空格-->
+    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
+
+    <!--静态方法的this调用错误-->
+    <rule ref="Squiz.Scope.StaticThisUsage"/>
+
+    <!--关键字空格-->
+    <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+
+    <!--数组箭头要有空格-->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+
+
+    <rule ref="Zend.Files.ClosingTag">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <!--if/else switch空格-->
+    <rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
+    <rule ref="PSR2.ControlStructures.ElseIfDeclaration"/>
+    <rule ref="PSR2.ControlStructures.SwitchDeclaration"/>
+
+    <!--<rule ref="PSR2.Methods.MethodDeclaration"/>-->
+
+    <!--文件末尾空行-->
+    <!--<rule ref="PSR2.Files.EndFileNewline"/>-->
+
+    <!--操作符空行-->
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent"/>
+
+    <!--多余的大括号-->
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
+
+    <!--一行不超过120个字符-->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+    <!--关键字小写-->
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+
+</ruleset>
